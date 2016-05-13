@@ -19,5 +19,8 @@
 / {
 	model = "Qualcomm MSM 8610v2 QRD SKUAB";
 	compatible = "qcom,msm8610-qrd", "qcom,msm8610", "qcom,qrd";
-	qcom,board-id = <11 3>;
+	qcom,board-id = <0x18 0x0>;
+
+        custom_config {
+        };
 };

@@ -63,9 +63,9 @@
 			interrupt-gpios = <&msmgpio 1 0x00>;
 			vdd-supply = <&pm8110_l19>;
 			vcc-i2c-supply = <&pm8110_l14>;
-			goodix,panel-coords = <0 0 540 980>;
-			goodix,display-coords = <0 0 540 960>;
-			goodix,button-map= <139 172 158>;
+                                goodix,panel-coords = <0x0 0x0 0x400 0x258>;
+                                goodix,display-coords = <0x0 0x0 0x400 0x258>;
+                                goodix,button-map = <0x8b 0x66 0x9e>;
 			goodix,product-id = "915";
 			goodix,enable-power-off;
 			goodix,cfg-data0 = [
@@ -88,6 +88,9 @@
 				00 FF FF FF FF FF FF FF 00 00
 				00 FF FF FF FF FF FF FF FF FF
 				F8 FF FF FF E4 01];
+                                goodix,have-touch-key;
+                                goodix,driver-send-cfg;
+
 		};
 	};
 	gen-vkeys {
@@ -175,7 +178,7 @@
 };
 
 &mdss_dsi0 {
-	qcom,dsi-pref-prim-pan = <&dsi_otm8018b_fwvga_vid>;
+	qcom,dsi-pref-prim-pan = <&dsi_fw8978_600p_vid>;
 };
 
 &dsi_otm8018b_fwvga_vid {
